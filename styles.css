@@ -20,6 +20,9 @@ header {
     margin: 1%;
     font-size: 30px;
     height: 150px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
@@ -101,4 +104,57 @@ main {
     font-size: 20px;
     cursor: pointer;
     font-weight: 700;
+}
+
+#bannerAd {
+    height: 150px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#bannerAdScene1 {
+    position: absolute;
+    width: 2000px;
+    top: -300px;
+    left: -850px;
+    z-index: 1;
+    animation-name: bannerScene1Background;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#bannerAdText {
+    position: absolute;
+    top: 0px;
+    vertical-align: middle;
+    z-index: 2;
+    animation-name: moveText;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bannerScene1Background {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -850px;
+    }
+}
+
+@keyframes moveText {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 90%;
+    }
+    100% {
+        left: 0%;
+    }
 }
