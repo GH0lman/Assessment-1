@@ -46,3 +46,56 @@ function prevPage() {
         showPage(currentPage);
     }
 }
+
+const bannerAdText = document.getElementById("bannerAdText");
+
+let sceneNumber = 0;
+let timer = null;
+let scenes = [
+    document.getElementById("bannerAdScene1"),
+    document.getElementById("bannerAdScene2")
+];
+
+function changeScene() {
+    switch (sceneNumber) {
+        case 0:
+            scenes[0].style.visibility = "visible";
+            scenes[1].style.visibility = "hidden";
+            bannerAdText.textContent = 'Interested in More Fun at Parakai Springs?';
+            break;
+        case 1:
+            scenes[0].style.visibility = "hidden";
+            scenes[1].style.visibility = "visible";
+            bannerAdText.textContent = 'Check out the new "Fast Pass" entry ticket!';
+            break;
+        default:
+            break;
+    }
+}
+
+function animateSidebar() {
+    if (sceneNumber >= scenes.length) {
+        clearInterval(timer);
+    }
+
+    switch (sceneNumber) {
+        case 0:
+            sceneNumber++;
+            break;
+        case 1:
+            sceneNumber--;
+            break;
+        default:
+            break;
+    }
+
+    changeScene();
+}
+
+function play() {
+    sceneNumber = 0;
+    changeScene();
+    timer = setInterval(animateSidebar, 3000);
+}
+
+play();

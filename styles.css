@@ -11,7 +11,7 @@ html, body {
     font-size: 16px;
     line-height: 1.5;
     color: #000;
-    background-color: #ddd;
+    background-color: #e3f0ff;
 }
 
 header {
@@ -107,6 +107,8 @@ main {
 }
 
 #bannerAd {
+    border: 1px solid #1f1f1f8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
     height: 150px;
     display: block;
     position: relative;
@@ -127,15 +129,39 @@ main {
     animation-iteration-count: infinite;
 }
 
+#bannerAdScene2 {
+    position: absolute;
+    width: 2000px;
+    top: -300px;
+    left: 0px;
+    z-index: 1;
+    animation-name: bannerScene2Background;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
 #bannerAdText {
     position: absolute;
-    top: 0px;
     vertical-align: middle;
     z-index: 2;
+    left: 1%;
     animation-name: moveText;
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+a:link {
+    color: #000;
+}
+  
+a:visited {
+    color: #000;
+}
+  
+a:hover {
+    color: #000069;
 }
 
 @keyframes bannerScene1Background {
@@ -147,14 +173,23 @@ main {
     }
 }
 
-@keyframes moveText {
+@keyframes bannerScene2Background {
     0% {
-        left: 0%;
-    }
-    50% {
-        left: 90%;
+        width: 2000px
     }
     100% {
-        left: 0%;
+        width: 1200px
+    }
+}
+
+@keyframes moveText {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: 15%;
+    }
+    100% {
+        left: 1%;
     }
 }
