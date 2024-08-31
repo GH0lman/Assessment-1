@@ -27,19 +27,78 @@ section {
     align-items: stretch;
 }
 
-.content {
+
+aside {
+    flex-grow: 1;
     background-color: #fff;
-    text-align: center;
+    padding: 1%;
     margin: 1%;
-    font-size: 30px;
     height: 600px;
 }
 
-.content.form {
-    flex-grow: 14;
+.card-title {
+    margin: 8px;
 }
 
+progress {
+    margin: 8px;
+    padding: 16px;
+}
 
-.content.sidebar {
-    flex-grow: 1;
+.row {
+    width: 100%;
+    float: left;
+    padding: 32px 2px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    flex-grow: 14;
+    flex-direction: column;
+    border: 1px solid #1f1f1f8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    background-color: #fff;
+    padding: 1%;
+    margin: 1%;
+    height: 600px;
+    width: 25%;
+}
+
+.form-header {
+    flex: 0 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.form-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+.form-footer {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.form-btn {
+    background-color: #7b91e0;
+    border: 3px solid #495b9c;
+    padding: 16px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
 }

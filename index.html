@@ -12,12 +12,104 @@
         Header Advertisement
     </header>
     <section> <!-- Form Page and Sidebar Advertisement -->
-        <div class="content form">
-            Form Page
-        </div>
-        <div class="content sidebar">
+        <main> <!-- Form Page -->
+            <div class="form-header">
+                <h1 class="card-title">Booking Form</h1>
+                <progress value="25" max="100"></progress>
+            </div>
+            <!-- Form Page 1 -->
+            <div id="form-page1" class="form-content" style="display: block">
+                <div> <!-- Page Title -->
+                    <h2>Part 1</h2>
+                </div>
+                <div> <!-- Page Input Fields -->
+                    <label for="date" class="row">
+                        Date:
+                        <input type="text" id="date-input" />
+                    </label>
+                    <label for="adults" class="row">
+                        Adults:
+                        <input type="text" id="adult-input" />
+                    </label>
+                    <label for="children" class="row">
+                        Children:
+                        <input type="text" id="child-input" />
+                    </label>
+                </div>
+            </div>
+            <!-- Form Page 2 -->
+            <div id="form-page2" class="form-content" style="display: none">
+                <div> <!-- Page Title -->
+                    <h2>Part 2</h2>
+                </div>
+                <div> <!-- Page Input Fields -->
+                    <label for="fName" class="row">
+                        First Name:
+                        <input type="text" id="fName-input" />
+                    </label>
+                    <label for="lname" class="row">
+                        Last Name:
+                        <input type="text" id="lName-input" />
+                    </label>
+                    <label for="email" class="row">
+                        Email:
+                        <input type="text" id="email-input" />
+                    </label>
+                </div>
+            </div>
+            <!-- Form Page 3 -->
+            <div id="form-page3" class="form-content" style="display: none">
+                <div> <!-- Page Title -->
+                    <h2>Part 3</h2>
+                </div>
+                <div> <!-- Page Input Fields -->
+                    <div>
+                        <label for="ticketColor" class="row">
+                            Ticket Color: 
+                            <input type="color" id="color-input" />
+                        </label>
+                    </div>
+                    <div> <!-- Radio Button Input -->
+                        <h3>Optional Storage Locker</h3>
+                        <label for="locker-not-include">
+                            <input type="radio" id="not-include" name="storage-locker" value="Not-Include" checked="true" />
+                            Do Not Include
+                        </label>
+                        <label for="locker-include">
+                            <input type="radio" id="include" name="storage-locker" value="Include" />
+                            Include
+                        </label>
+                    </div> 
+                </div>
+            </div>
+            <!-- Form Page 4 -->
+            <div id="form-page4" class="form-content" style="display: none">
+                <div> <!-- Page Title -->
+                    <h2>Part 4</h2>
+                </div>
+                <div> <!-- Page Input Fields -->
+                    <h3>Terms and Conditions</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem rem voluptates veniam saepe laboriosam molestias voluptatem libero, maiores facilis nam dolores debitis veritatis ratione reprehenderit error, soluta hic quos sapiente.</p>
+                    <label class="row">
+                        <input type="checkbox" id="termsConditions" />
+                        Agree to Terms and Conditions
+                    </label>
+                </div>
+            </div>
+            <div class="form-footer"> <!-- Page Nav Buttons -->
+                <button class="form-btn" id="prevBtn" type="button" onclick="prevPage()" style="display: none">
+                    Previous Page
+                </button>
+                <button class="form-btn" id="nextBtn" type="button" onclick="nextPage()">
+                    Next Page
+                </button>
+            </div>
+        </main>
+        <!-- Sidebar Advertisement -->
+        <aside>
             Sidebar Advertisement
-        </div>
+        </aside>
+        <script src="./app.js"></script>
     </section>
 </body>
 </html>
