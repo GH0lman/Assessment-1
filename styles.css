@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    font-family: Helvetica, Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #ddd;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+    margin: 1%;
+    font-size: 30px;
+    height: 150px;
+}
+
+section {
+    display: flex;
+    align-items: stretch;
+}
+
+.content {
+    background-color: #fff;
+    text-align: center;
+    margin: 1%;
+    font-size: 30px;
+    height: 600px;
+}
+
+.content.form {
+    flex-grow: 14;
+}
+
+
+.content.sidebar {
+    flex-grow: 1;
+}
