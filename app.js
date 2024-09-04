@@ -50,11 +50,11 @@ function prevPage() {
 const bannerAdText = document.getElementById("bannerAdText");
 
 let sceneNumber = 0;
-let timer = null;
 let scenes = [
     document.getElementById("bannerAdScene1"),
     document.getElementById("bannerAdScene2")
 ];
+let timer = null;
 
 function changeScene() {
     switch (sceneNumber) {
