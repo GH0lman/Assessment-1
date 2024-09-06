@@ -47,6 +47,7 @@ function prevPage() {
     }
 }
 
+/* 
 const bannerAdText = document.getElementById("bannerAdText");
 
 let sceneNumber = 0;
@@ -99,3 +100,4 @@ function play() {
 }
 
 play();
+*/

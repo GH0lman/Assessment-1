@@ -33,10 +33,13 @@ section {
 
 aside {
     flex-grow: 1;
+    border: 1px solid #1f1f1f8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
     background-color: #fff;
-    padding: 1%;
     margin: 1%;
     height: 600px;
+    width: 10%;
+    overflow: hidden;
 }
 
 .card-title {
@@ -119,11 +122,11 @@ main {
 
 #bannerAdScene1 {
     position: absolute;
-    width: 2000px;
-    top: -300px;
+    width: 1200px;
+    top: -200px;
     z-index: 1;
     animation-name: bannerScene1Background;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -134,7 +137,7 @@ main {
     top: -500px;
     z-index: 1;
     animation-name: bannerScene2Background;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -155,26 +158,53 @@ main {
 @keyframes bannerScene1Background {
     0% {
         left: 0px;
+        opacity: 100%;
+    }
+    49.9% {
+        opacity: 100%;
+        left: -300px;
+    }
+    50% {
+        opacity: 0%;
     }
     100% {
-        left: -850px;
+        opacity: 0%;
     }
 }
 
 @keyframes bannerScene2Background {
     0% {
+        opacity: 0%;
+    }
+    49.9% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
         transform: scale(0.75);
     }
     100% {
+        opacity: 100%;
         transform: scale(1);
     }
 }
 
 @keyframes moveText {
+    0% {
+        content: "Test1";
+    }
     50% {
-        left: 30%;
+        left: 90%;
         font-size: 36px;
         padding: 20px 0px;
         color: #000;
+        content: "Changed Text";
     }
+    100% {
+        content: "Test3";
+    }
+}
+
+.sidebarAdImage {
+    width: 900px;
 }
