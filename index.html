@@ -1,160 +1,175 @@
+<!-- Created by George Holman - Student ID: 1580967 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment 1</title>
-    <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-    <header> <!-- Header Advertisement -->
-        <div id="bannerAd">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assessment 1 - GHolman</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="borderStyle">
+            <a href="./planning-documents/Storyboards - GHolman.pdf" target="_blank">Storyboard PDF</a>
+            <a href="./planning-documents/Wireframes - GHolman.pdf" target="_blank">Wireframe PDF</a>
+        </nav>
+        <!-- Header Advertisement -->
+        <header class="borderStyle">
             <a href="https://www.parakaisprings.co.nz" target="_blank">
                 <h2 id="bannerAdText1">Interested in More Fun at Parakai Springs?</h2>
                 <img id="bannerAdScene1" src="./assets/header-ad-1.jpg" />
                 <h2 id="bannerAdText2">Check out the new "Fast Pass" entry ticket!</h2>
                 <img id="bannerAdScene2" src="./assets/header-ad-2.jpg" />
+                <p id="bannerCreditText">George Holman - 1580967</p>
             </a>
-        </div>
-    </header>
-    <section> <!-- Form Page and Sidebar Advertisement -->
-        <main> <!-- Form Page -->
-            <div class="form-header">
-                <h1 class="card-title">Booking Form</h1>
-                <progress value="25" max="100"></progress>
-            </div>
-            <!-- Form Page 1 -->
-            <div id="form-page1" class="form-content" style="display: block">
-                <div> <!-- Page Title -->
-                    <h2>Part 1</h2>
+        </header>
+        <!-- Booking Form Page and Sidebar Advertisement -->
+        <section>
+            <!-- Booking Form Page -->
+            <main class="borderStyle">
+                <!-- Book Form Header -->
+                <div id="form-header">
+                    <h1>Booking Form</h1>
+                    <progress value="25" max="100"></progress>
                 </div>
-                <div> <!-- Page Input Fields -->
-                    <label class="row">
-                        Date:
-                        <input type="text" id="date" />
-                    </label>
-                    <label class="row">
-                        Adults:
-                        <input type="text" id="adult" />
-                    </label>
-                    <label class="row">
-                        Children:
-                        <input type="text" id="children" />
-                    </label>
-                </div>
-            </div>
-            <!-- Form Page 2 -->
-            <div id="form-page2" class="form-content" style="display: none">
-                <div> <!-- Page Title -->
-                    <h2>Part 2</h2>
-                </div>
-                <div> <!-- Page Input Fields -->
-                    <label class="row">
-                        First Name:
-                        <input type="text" id="fName" />
-                    </label>
-                    <label class="row">
-                        Last Name:
-                        <input type="text" id="lName" />
-                    </label>
-                    <label class="row">
-                        Email:
-                        <input type="text" id="email" />
-                    </label>
-                </div>
-            </div>
-            <!-- Form Page 3 -->
-            <div id="form-page3" class="form-content" style="display: none">
-                <div> <!-- Page Title -->
-                    <h2>Part 3</h2>
-                </div>
-                <div> <!-- Page Input Fields -->
-                    <div>
+                <!-- Form Page 1 -->
+                <div id="form-page1" class="form-content">
+                    <div> <!-- Page Title -->
+                        <h2>Part 1</h2>
+                    </div>
+                    <div> <!-- Date and Number Input Fields -->
                         <label class="row">
-                            Ticket Color: 
-                            <input type="color" id="ticketColour" />
+                            Date:
+                            <input type="date" id="date" />
+                        </label>
+                        <label class="row">
+                            Adults:
+                            <input type="number" id="adult" />
+                        </label>
+                        <label class="row">
+                            Children:
+                            <input type="number" id="children" />
                         </label>
                     </div>
-                    <div> <!-- Radio Button Input -->
-                        <h3>Optional Storage Locker</h3>
-                        <label>
-                            <input type="radio" name="storage-locker" value="Not Included" checked="true" />
-                            Do Not Include
+                </div>
+                <!-- Form Page 2 -->
+                <div id="form-page2" class="form-content">
+                    <div> <!-- Page Title -->
+                        <h2>Part 2</h2>
+                    </div>
+                    <div> <!-- Text Input Fields -->
+                        <label class="row">
+                            First Name:
+                            <input type="text" id="fName" />
                         </label>
-                        <label for="locker-include">
-                            <input type="radio"  name="storage-locker" value="Included" />
-                            Include
+                        <label class="row">
+                            Last Name:
+                            <input type="text" id="lName" />
                         </label>
-                    </div> 
+                        <label class="row">
+                            Email:
+                            <input type="text" id="email" />
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- Form Page 4 -->
-            <div id="form-page4" class="form-content" style="display: none">
-                <div> <!-- Page Title -->
-                    <h2>Part 4</h2>
+                <!-- Form Page 3 -->
+                <div id="form-page3" class="form-content">
+                    <div> <!-- Page Title -->
+                        <h2>Part 3</h2>
+                    </div>
+                    <div>
+                        <div> <!-- Colour Input Field -->
+                            <label class="row">
+                                Ticket Color: 
+                                <input type="color" id="ticketColour" />
+                            </label>
+                        </div>
+                        <div> <!-- Radio Button Input Fields -->
+                            <h3>Optional Storage Locker</h3>
+                            <label>
+                                <input type="radio" name="storage-locker" value="Not Included" checked="true" />
+                                Do Not Include
+                            </label>
+                            <label for="locker-include">
+                                <input type="radio"  name="storage-locker" value="Included" />
+                                Include
+                            </label>
+                        </div> 
+                    </div>
                 </div>
-                <div> <!-- Page Input Fields -->
-                    <h3>Terms and Conditions</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem rem voluptates veniam saepe laboriosam molestias voluptatem libero, maiores facilis nam dolores debitis veritatis ratione reprehenderit error, soluta hic quos sapiente.</p>
-                    <label class="row">
-                        <input type="checkbox" id="termsConditions" />
-                        Agree to Terms and Conditions
-                    </label>
+                <!-- Form Page 4 -->
+                <div id="form-page4" class="form-content">
+                    <div> <!-- Page Title -->
+                        <h2>Part 4</h2>
+                    </div>
+                    <div> <!-- Term and Conditions Information -->
+                        <h3>Terms and Conditions</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem rem voluptates veniam saepe laboriosam molestias voluptatem libero, maiores facilis nam dolores debitis veritatis ratione reprehenderit error, soluta hic quos sapiente.</p>
+                        <label class="row">
+                            <input type="checkbox" id="termsConditions" />
+                            Agree to Terms and Conditions
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <!-- Form Page 5 -->
-            <div id="form-page5" class="form-content" style="display: none">
-                <div> <!-- Page Title -->
-                    <h2>Summary Page</h2>
+                <!-- Form Page 5 -->
+                <div id="form-page5" class="form-content">
+                    <div> <!-- Page Title -->
+                        <h2>Summary Page</h2>
+                    </div>
+                    <div> <!-- Summary Table -->
+                        <table class="borderStyle" id="bookingFormData">
+                            <thead>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Date</td>
+                                <td>Adult</td>
+                                <td>Children</td>
+                                <td>Ticket Colour</td>
+                                <td>Storage Locker Included</td>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
-                <div> <!-- Page Input Fields -->
-                    <table id="collected-data">
-                        <thead>
-                            <td>Name</td>
-                            <td>Email</td>
-                            <td>Date</td>
-                            <td>Adult</td>
-                            <td>Children</td>
-                            <td>Ticket Colour</td>
-                            <td>Storage Locker Included</td>
-                        </thead>
-                    </table>
+                <!-- Book Form Navigation Buttons -->
+                <div id="form-footer">
+                    <button class="form-button" id="prevBtn" type="button" onclick="prevPage()" style="display: none">
+                        Previous Page
+                    </button>
+                    <button class="form-button" id="nextBtn" type="button" onclick="nextPage()">
+                        Next Page
+                    </button>
                 </div>
-            </div>
-            <div class="form-footer"> <!-- Page Nav Buttons -->
-                <button class="form-btn" id="prevBtn" type="button" onclick="prevPage()" style="display: none">
-                    Previous Page
-                </button>
-                <button class="form-btn" id="nextBtn" type="button" onclick="nextPage()">
-                    Next Page
-                </button>
-            </div>
-        </main>
-        <!-- Sidebar Advertisement -->
-        <aside>
-            <a href="https://www.greatjourneysnz.com/" target="_blank">
-                <div class="sidebarAd" id="sidebarAdScene1">
-                    <img class="sidebarAdImage" src="./assets/sidebar-ad-1.jpg" />
-                    <div class="corner"></div>
-                    <div class="triangleSmall"></div>
-                    <h3 class="sidebarAdText">Experience Scenic Plus</h3>
-                </div>
-                <div class="sidebarAd" id="sidebarAdScene2">
-                    <img class="sidebarAdImage2" src="./assets/sidebar-ad-2.jpg" />
-                    <div class="corner"></div>
-                    <div class="triangleSmall"></div>
-                    <h3 class="sidebarAdText">Experience a feast of scenery and regionally inspired dishes</h3>
-                </div>
-                <div class="sidebarAd" id="sidebarAdScene3">
-                    <img class="sidebarAdImage" src="./assets/sidebar-ad-3.jpg" style="opacity: 75%;" />
-                    <h2 class="sidebarAdBookBtn">Book now!</h2>
-                    <div class="triangleLarge"></div>
-                    <h1 class="sidebarAdText2">Great Journeys New Zealand</h1>
-                </div>
-            </a>
-            <button id="sidebarReplay" type="button">Replay</button>
-        </aside>
-        <script src="./app.js"></script>
-    </section>
-</body>
+            </main>
+            <!-- Sidebar Advertisement -->
+            <aside class="borderStyle">
+                <a href="https://www.greatjourneysnz.com/" target="_blank">
+                    <!-- Sidebar Advertisement Scene 1 -->
+                    <div id="sidebarAdScene1">
+                        <img class="sidebarAdImageStyle1" src="./assets/sidebar-ad-1.jpg" />
+                        <div class="cornerBanner"></div>
+                        <div class="mainTriangleBannerSmall"></div>
+                        <h3 class="sidebarAdTextStyle1">Experience Scenic Plus</h3>
+                    </div>
+                    <!-- Sidebar Advertisement Scene 2 -->
+                    <div id="sidebarAdScene2">
+                        <img class="sidebarAdImageStyle2" src="./assets/sidebar-ad-2.jpg" />
+                        <div class="cornerBanner"></div>
+                        <div class="mainTriangleBannerSmall"></div>
+                        <h3 class="sidebarAdTextStyle1">Experience a feast of scenery and regionally inspired dishes</h3>
+                    </div>
+                    <!-- Sidebar Advertisement Scene 3 -->
+                    <div id="sidebarAdScene3">
+                        <img class="sidebarAdImageStyle1" src="./assets/sidebar-ad-3.jpg" style="opacity: 75%;" />
+                        <div class="mainTriangleBannerLarge"></div>
+                        <h1 class="sidebarAdTextStyle2">Great Journeys New Zealand</h1>
+                        <h2 id="sidebarAdBookingButton">Book now!</h2>
+                        <p id="sidebarCreditText">George Holman - 1580967</p>
+                    </div>
+                </a>
+                <button id="sidebarReplay" type="button">Replay</button>
+            </aside>
+            <!-- Java Script Link -->
+            <script src="./app.js"></script>
+        </section>
+    </body>
 </html>
