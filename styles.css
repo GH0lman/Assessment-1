@@ -15,11 +15,7 @@ html, body {
 }
 
 header {
-    background-color: #fff;
-    text-align: center;
     margin: 1%;
-    font-size: 30px;
-    height: 150px;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +23,6 @@ header {
 
 section {
     display: flex;
-    align-items: stretch;
 }
 
 
@@ -35,11 +30,11 @@ aside {
     flex-grow: 1;
     border: 1px solid #1f1f1f8a;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
-    background-color: #fff;
-    margin: 1%;
-    height: 600px;
+    margin: 3%;
     width: 10%;
     overflow: hidden;
+    background-color: black;
+    position: relative;
 }
 
 .card-title {
@@ -68,7 +63,7 @@ main {
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
     background-color: #fff;
     padding: 1%;
-    margin: 1%;
+    margin: 3%;
     height: 600px;
     width: 25%;
 }
@@ -122,7 +117,7 @@ main {
 
 #bannerAdScene1 {
     position: absolute;
-    width: 1200px;
+    width: 1400px;
     top: -200px;
     z-index: 1;
     animation-name: bannerScene1Background;
@@ -142,14 +137,27 @@ main {
     animation-iteration-count: infinite;
 }
 
-#bannerAdText {
+#bannerAdText1 {
     position: absolute;
     font-size: 26px;
     padding: 32px 0px;
     z-index: 2;
-    color: #b5bbdb;
+    color: white;
     left: 1%;
-    animation-name: moveText;
+    animation-name: moveText1;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#bannerAdText2 {
+    position: absolute;
+    font-size: 26px;
+    padding: 32px 0px;
+    z-index: 2;
+    color: black;
+    left: 1%;
+    animation-name: moveText2;
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -162,7 +170,7 @@ main {
     }
     49.9% {
         opacity: 100%;
-        left: -300px;
+        left: -200px;
     }
     50% {
         opacity: 0%;
@@ -189,22 +197,143 @@ main {
     }
 }
 
-@keyframes moveText {
+@keyframes moveText1 {
     0% {
-        content: "Test1";
+        opacity: 100%;
+        color: white;
+    }
+    49.9% {
+        opacity: 100%;
     }
     50% {
-        left: 90%;
+        left: 30%;
         font-size: 36px;
         padding: 20px 0px;
         color: #000;
-        content: "Changed Text";
+        opacity: 0%;
     }
     100% {
-        content: "Test3";
+        opacity: 0%;
     }
+}
+
+@keyframes moveText2 {
+    0% {
+        opacity: 0%;
+    }
+    49.9% {
+        opacity: 0%;
+    }
+    50% {
+        left: 30%;
+        font-size: 36px;
+        padding: 20px 0px;
+        opacity: 100%;      
+        color: black;  
+    }
+    100% {
+        opacity: 100%;
+        color: white;
+    }
+}
+
+.sidebarAd {
+    position: relative;
 }
 
 .sidebarAdImage {
     width: 900px;
+    margin-left: -375px;
+    position: absolute;
+}
+
+.sidebarAdImage2 {
+    width: 325px;
+    margin-left: -50px;
+    position: absolute;
+}
+
+.sidebarAdBookBtn {
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+    position: absolute;
+
+    left: 20%;
+
+    border-radius: 50%;
+
+    background-color: lightskyblue;
+    color: black;
+    text-align: center;
+}
+
+.triangleSmall {
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 250px solid lightskyblue;
+
+    position: absolute;
+
+    height: 600px;
+    left: -45%;
+}
+
+.triangleLarge {
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 300px solid lightskyblue;
+
+    position: absolute;
+
+    height: 600px;
+    left: -70%;
+}
+
+.corner {
+	width: 0;
+	height: 0;
+
+    position: absolute;
+
+	border-right: 100px solid transparent;
+	border-top: 100px solid lightskyblue;
+}
+
+.sidebarAdText {
+    position: absolute;
+
+    top: 475px;
+    padding: 0px 16px;
+
+    color: #000;
+    text-align: center;
+}
+
+.sidebarAdText2 {
+    position: absolute;
+
+    top: 425px;
+
+    font-size: 30px;
+
+    color: #000;
+    text-align: center;
+}
+
+#sidebarReplay {
+    position: absolute;
+
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+
+    left: 30%;
+    top: 40%;
+
+    border-radius: 80%;
+
+    background-color: grey;
+    color: white;
+    text-align: center;
 }

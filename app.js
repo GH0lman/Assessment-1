@@ -47,33 +47,40 @@ function prevPage() {
     }
 }
 
-/* 
-const bannerAdText = document.getElementById("bannerAdText");
-
+const replayBtn = document.getElementById("sidebarReplay");
 let sceneNumber = 0;
-let scenes = [
-    document.getElementById("bannerAdScene1"),
-    document.getElementById("bannerAdScene2")
-];
 let timer = null;
+
+let scenes = [
+    document.getElementById("sidebarAdScene1"),
+    document.getElementById("sidebarAdScene2"),
+    document.getElementById("sidebarAdScene3")
+];
 
 function changeScene() {
     switch (sceneNumber) {
         case 0:
             scenes[0].style.visibility = "visible";
             scenes[1].style.visibility = "hidden";
-            bannerAdText.textContent = 'Interested in More Fun at Parakai Springs?';
+            scenes[2].style.visibility = "hidden";
+            replayBtn.style.visibility = "hidden";
             break;
         case 1:
             scenes[0].style.visibility = "hidden";
             scenes[1].style.visibility = "visible";
-            bannerAdText.textContent = 'Check out the new "Fast Pass" entry ticket!';
+            scenes[2].style.visibility = "hidden";
+            replayBtn.style.visibility = "hidden";
+            break;
+        case 2:
+            scenes[0].style.visibility = "hidden";
+            scenes[1].style.visibility = "hidden";
+            scenes[2].style.visibility = "visible";
+            replayBtn.style.visibility = "visible";
             break;
         default:
             break;
     }
 }
-
 function animateSidebar() {
     if (sceneNumber >= scenes.length) {
         clearInterval(timer);
@@ -84,7 +91,7 @@ function animateSidebar() {
             sceneNumber++;
             break;
         case 1:
-            sceneNumber--;
+            sceneNumber++;
             break;
         default:
             break;
@@ -93,11 +100,12 @@ function animateSidebar() {
     changeScene();
 }
 
+replayBtn.addEventListener("click", play);
+
 function play() {
     sceneNumber = 0;
     changeScene();
-    timer = setInterval(animateSidebar, 3000);
+    timer = setInterval(animateSidebar, 5000);
 }
 
 play();
-*/
