@@ -209,7 +209,7 @@ main {
         left: 30%;
         font-size: 36px;
         padding: 20px 0px;
-        color: #000;
+        color: black;
         opacity: 0%;
     }
     100% {
@@ -306,7 +306,7 @@ main {
     top: 475px;
     padding: 0px 16px;
 
-    color: #000;
+    color: black;
     text-align: center;
 }
 
@@ -335,5 +335,29 @@ main {
 
     background-color: grey;
     color: white;
+    text-align: center;
+}
+
+table {
+    border: 1px solid #1f1f1f8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    width: 100%;
+    display: table;
+    margin-top: 20px;
+}
+
+thead {
+    color:white;
+    background-color: midnightblue;
+}
+
+th {
+    padding: 8px 8px 8px 16px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+td {
     text-align: center;
 }

@@ -29,17 +29,17 @@
                     <h2>Part 1</h2>
                 </div>
                 <div> <!-- Page Input Fields -->
-                    <label for="date" class="row">
+                    <label class="row">
                         Date:
-                        <input type="text" id="date-input" />
+                        <input type="text" id="date" />
                     </label>
-                    <label for="adults" class="row">
+                    <label class="row">
                         Adults:
-                        <input type="text" id="adult-input" />
+                        <input type="text" id="adult" />
                     </label>
-                    <label for="children" class="row">
+                    <label class="row">
                         Children:
-                        <input type="text" id="child-input" />
+                        <input type="text" id="children" />
                     </label>
                 </div>
             </div>
@@ -49,17 +49,17 @@
                     <h2>Part 2</h2>
                 </div>
                 <div> <!-- Page Input Fields -->
-                    <label for="fName" class="row">
+                    <label class="row">
                         First Name:
-                        <input type="text" id="fName-input" />
+                        <input type="text" id="fName" />
                     </label>
-                    <label for="lname" class="row">
+                    <label class="row">
                         Last Name:
-                        <input type="text" id="lName-input" />
+                        <input type="text" id="lName" />
                     </label>
-                    <label for="email" class="row">
+                    <label class="row">
                         Email:
-                        <input type="text" id="email-input" />
+                        <input type="text" id="email" />
                     </label>
                 </div>
             </div>
@@ -70,19 +70,19 @@
                 </div>
                 <div> <!-- Page Input Fields -->
                     <div>
-                        <label for="ticketColor" class="row">
+                        <label class="row">
                             Ticket Color: 
-                            <input type="color" id="color-input" />
+                            <input type="color" id="ticketColour" />
                         </label>
                     </div>
                     <div> <!-- Radio Button Input -->
                         <h3>Optional Storage Locker</h3>
-                        <label for="locker-not-include">
-                            <input type="radio" id="not-include" name="storage-locker" value="Not-Include" checked="true" />
+                        <label>
+                            <input type="radio" name="storage-locker" value="Not Included" checked="true" />
                             Do Not Include
                         </label>
                         <label for="locker-include">
-                            <input type="radio" id="include" name="storage-locker" value="Include" />
+                            <input type="radio"  name="storage-locker" value="Included" />
                             Include
                         </label>
                     </div> 
@@ -100,6 +100,25 @@
                         <input type="checkbox" id="termsConditions" />
                         Agree to Terms and Conditions
                     </label>
+                </div>
+            </div>
+            <!-- Form Page 5 -->
+            <div id="form-page5" class="form-content" style="display: none">
+                <div> <!-- Page Title -->
+                    <h2>Summary Page</h2>
+                </div>
+                <div> <!-- Page Input Fields -->
+                    <table id="collected-data">
+                        <thead>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Date</td>
+                            <td>Adult</td>
+                            <td>Children</td>
+                            <td>Ticket Colour</td>
+                            <td>Storage Locker Included</td>
+                        </thead>
+                    </table>
                 </div>
             </div>
             <div class="form-footer"> <!-- Page Nav Buttons -->
