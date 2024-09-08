@@ -7,7 +7,7 @@ const progressBar = document.querySelector("progress");
 
 const replayBtn = document.getElementById("sidebarReplay");
 
-const bookingFormData = document.getElementById("collected-data");
+const formData = document.getElementById("bookingFormData");
 
 // Variables Setup
 let currentPage = 1;
@@ -144,7 +144,7 @@ function submitData() {
     cellLocker.innerHTML = data.locker;
 
     // Sets new booking to the table.
-    bookingFormData.appendChild(dataRow);
+    formData.appendChild(dataRow);
 }
 
 // Reset Input Function is called to reset the data tables when user decides to create new booking.
